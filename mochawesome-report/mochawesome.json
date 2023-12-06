@@ -1,0 +1,214 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-06T21:56:52.898Z",
+    "end": "2023-12-06T21:58:58.783Z",
+    "duration": 125885,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "839f7674-7799-4da2-b06b-fb0f61410c11",
+      "title": "",
+      "fullFile": "C:\\Users\\Gabriel\\Desktop\\TareaSelenium\\test\\login.spec.js",
+      "file": "\\test\\login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d4209a0f-8394-418d-9b4a-94f5d36c5e6d",
+          "title": "Pruebas de Automatización selenium",
+          "fullFile": "C:\\Users\\Gabriel\\Desktop\\TareaSelenium\\test\\login.spec.js",
+          "file": "\\test\\login.spec.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Pruebas de Automatización selenium\"",
+              "fullTitle": "Pruebas de Automatización selenium \"before all\" hook in \"Pruebas de Automatización selenium\"",
+              "timedOut": null,
+              "duration": 23891,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "driver = new Builder().forBrowser('MicrosoftEdge').build();",
+              "err": {},
+              "uuid": "e4ef535e-a03a-4e37-b31d-96a2ec4fff17",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Pruebas de Automatización selenium\"",
+              "fullTitle": "Pruebas de Automatización selenium \"after all\" hook in \"Pruebas de Automatización selenium\"",
+              "timedOut": null,
+              "duration": 6383,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await driver.sleep(5000);\nawait driver.quit();",
+              "err": {},
+              "uuid": "8cfd4f90-f7fc-4c62-89a9-08891cfe9d45",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Prueba 1: Registro de Usuario",
+              "fullTitle": "Pruebas de Automatización selenium Prueba 1: Registro de Usuario",
+              "timedOut": null,
+              "duration": 55139,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://magento.softwaretestingboard.com/');\n const finalScreenshot1 = await driver.takeScreenshot();\n    fs.writeFileSync('img/Pagina_inicio.png', finalScreenshot1, 'base64');\nawait driver.findElement(By.className('authorization-link')).click();\nawait driver.findElement(By.className('action create primary')).click();\nawait driver.findElement(By.id('firstname')).sendKeys('Jose');\nawait driver.findElement(By.id('lastname')).sendKeys('Cabral');\nawait driver.findElement(By.id('email_address')).sendKeys('JoseCabral3222@gmail.com');\nawait driver.findElement(By.id('password')).sendKeys('Jc11223344');\nawait driver.findElement(By.name('password_confirmation')).sendKeys('Jc11223344');\n const finalScreenshot2 = await driver.takeScreenshot();\n    fs.writeFileSync('img/Formulario_registro.png', finalScreenshot2, 'base64');\nawait driver.findElement(By.className('action submit primary')).click();",
+              "err": {},
+              "uuid": "15707ed4-fb29-46b8-94b2-b999b4941c73",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Prueba 2: Cambio de correo electronico",
+              "fullTitle": "Pruebas de Automatización selenium Prueba 2: Cambio de correo electronico",
+              "timedOut": null,
+              "duration": 6552,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(By.className('action edit')).click();\nawait driver.findElement(By.id('change-email')).click();\nconst emailInput = await driver.findElement(By.id('email'));\nawait emailInput.clear();\nawait emailInput.sendKeys('cabraljose322@gmail.com');\nawait driver.findElement(By.id('current-password')).sendKeys('Jc11223344');\nconst finalScreenshot3 = await driver.takeScreenshot();\n    fs.writeFileSync('img/Cambio_correo.png', finalScreenshot3, 'base64');\nawait driver.findElement(By.className('action save primary')).click();",
+              "err": {},
+              "uuid": "45b8d4ea-e569-497d-b68c-2b1faf95e951",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Prueba 3: Inicio de Sesión",
+              "fullTitle": "Pruebas de Automatización selenium Prueba 3: Inicio de Sesión",
+              "timedOut": null,
+              "duration": 6025,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.sleep(3000);\nawait driver.findElement(By.id('email')).sendKeys('cabraljose322@gmail.com');\nawait driver.findElement(By.id('pass')).sendKeys('Jc11223344');\nconst finalScreenshot7 = await driver.takeScreenshot();\nfs.writeFileSync('img/Inicio_sesion.png', finalScreenshot7, 'base64');\nawait driver.findElement(By.id('send2')).click();",
+              "err": {},
+              "uuid": "5cbcc6d0-9c8d-4a61-bfec-4338aeb81fc7",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Prueba 4: Cambio de contraseña",
+              "fullTitle": "Pruebas de Automatización selenium Prueba 4: Cambio de contraseña",
+              "timedOut": null,
+              "duration": 4940,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(By.className('action change-password')).click();\nawait driver.findElement(By.name('current_password')).sendKeys('Jc11223344');\nawait driver.findElement(By.id('password')).sendKeys('Jc112233444');\nawait driver.findElement(By.id('password-confirmation')).sendKeys('Jc112233444');\n const finalScreenshot4 = await driver.takeScreenshot();\nfs.writeFileSync('img/Cambio_contraseña.png', finalScreenshot4, 'base64');\nawait driver.findElement(By.className('action save primary')).click();",
+              "err": {},
+              "uuid": "60196225-805d-4012-8343-89d027dcac2f",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Prueba 5: Inicio y cierre de Sesión",
+              "fullTitle": "Pruebas de Automatización selenium Prueba 5: Inicio y cierre de Sesión",
+              "timedOut": null,
+              "duration": 11299,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.sleep(3000);\nawait driver.findElement(By.id('email')).sendKeys('cabraljose32@gmail.com');\nawait driver.findElement(By.id('pass')).sendKeys('Jc112233444');\nawait driver.findElement(By.id('send2')).click();\nawait driver.sleep(3000);\nawait driver.findElement(By.className('action switch')).click();\nconst finalScreenshot5 = await driver.takeScreenshot();\nfs.writeFileSync('img/Cierre_sesion.png', finalScreenshot5, 'base64');\nawait driver.findElement(By.className('authorization-link')).click();\nconst finalScreenshot6 = await driver.takeScreenshot();\nfs.writeFileSync('img/Sesion_cerrada.png', finalScreenshot6, 'base64');",
+              "err": {},
+              "uuid": "f79b5b8e-327b-4164-b5c6-174677d56092",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "15707ed4-fb29-46b8-94b2-b999b4941c73",
+            "45b8d4ea-e569-497d-b68c-2b1faf95e951",
+            "5cbcc6d0-9c8d-4a61-bfec-4338aeb81fc7",
+            "60196225-805d-4012-8343-89d027dcac2f",
+            "f79b5b8e-327b-4164-b5c6-174677d56092"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 83955,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
